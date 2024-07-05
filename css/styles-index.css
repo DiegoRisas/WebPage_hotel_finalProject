@@ -1,0 +1,119 @@
+/* Contenido principal */
+
+.main-content section {
+    margin-bottom: 30px;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.main-content p {
+    line-height: 1.6;
+}
+
+.main-content img {
+    max-width: 100%;
+    min-width: 380px;
+    /* height: auto; */
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Galería de imágenes */
+.galeria ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.galeria li {
+    width: 100%;
+    align-items: end;
+    margin: auto;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+.galeria li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+.galeria li img:hover {
+    transform: scale(1.02);
+}
+
+/* Enlaces de eventos */
+.eventos ul {
+    list-style-type: square;
+}
+
+.eventos ul li a {
+    /* color: #1e88e5; */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.eventos ul li a:hover {
+    color: var(--accent-color)
+}
+
+.eventos ul li a:visited {
+    color: blueviolet;
+}
+
+@media screen and (max-width: 630px) {
+    .main-content img {
+        min-width: 300px;
+        width: 100%;
+    }
+
+    .galeria li {
+        width: 100%;
+        min-width: 300px;
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 631px) and (max-width: 900px) {
+    .main-content img {
+        min-width: 380px;
+    }
+
+    .galeria ul {
+        display: inline-flex;
+        /* flex-direction: row; */
+        justify-content: space-between;
+    }
+
+    .galeria li {
+        width: 100%;
+        min-width: 380px;
+    }
+
+    .galeria img {
+        width: 100%;
+        align-items: stretch;
+    }
+}
